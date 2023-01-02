@@ -65,7 +65,7 @@ const App = () => {
   };
 
   return (
-  <SafeAreaView style={backgroundStyle}>
+  <SafeAreaView>
       <ScrollView>
         <Text style={styles.sectionTitle}>
             VotePlusMobile
