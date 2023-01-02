@@ -65,24 +65,13 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Text>VOTEPLUSMOBILE</Text>
-
-        </View>
+  <SafeAreaView style={backgroundStyle}>
+      <ScrollView>
+        <Text style={styles.sectionTitle}>
+            VotePlusMobile
+        </Text>
       </ScrollView>
-    </SafeAreaView>
+  </SafeAreaView>
   );
 };
 

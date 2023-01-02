@@ -5,5 +5,5 @@
 
 1. Run device / virtual device 
 2. npx react-native start
-3a. npx react-native run-android //separate terminal
-3i. npx react-native run-ios //separate terminal
+3. Android - npx react-native run-android //separate terminal
+4. IOS - npx react-native run-ios //separate terminal
