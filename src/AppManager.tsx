@@ -7,6 +7,8 @@ import SearcherComponent from './View/Searcher/SearcherComponent';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Entypo from 'react-native-vector-icons/Entypo';
+import colorsConst from './Consts/colors.json';
+import menuConst from './Consts/menu.json';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -14,53 +16,55 @@ const AppManager = () => {
     return (
         <NavigationContainer independent={true}>
             <Tab.Navigator
-                shifting={true}
+                initialRouteName={menuConst.menuHome.name}
+                // shifting={true}
                 labeled={false}
-                activeColor="black"
-                inactiveColor="#f7eb40"
-                barStyle={{ backgroundColor: '#2b2b2b'}}
+                activeColor="#ffffff"
+                inactiveColor={colorsConst.yellowColorForIcons}
+                barStyle={{ 
+                    backgroundColor: colorsConst.grayColorForMenu,
+                    maxHeight: 80,
+                    borderTopWidth: 0,
+                }}
+                
             >
                 <Tab.Screen
-                    name="Home"
+                    name={menuConst.menuHome.name}
                     component={HomeComponent}
                     options={{
-                        tabBarLabel: 'Home',
-                        tabBarColor: "#575757",
+                        tabBarColor: "red",
                         tabBarIcon: ({color}) => (
-                            <MaterialCommunityIcons name="home-variant-outline" color={color} size={32} />
+                            <MaterialCommunityIcons name="home-variant-outline" color={color} size={28} />
                         ),
                     }}
                 />
                 <Tab.Screen
-                    name="List"
+                    name={menuConst.menuList.name}
                     component={ListComponent}
                     options={{
-                        tabBarLabel: 'List',
                         tabBarColor: "#575757",
                         tabBarIcon: ({color}) => (
-                            <MaterialCommunityIcons name="view-list-outline"  color={color} size={32}/>
+                            <MaterialCommunityIcons name="view-list-outline"  color={color} size={28}/>
                         ),
                     }}
                 />
                 <Tab.Screen
-                    name="Search"
+                    name={menuConst.menuSearch.name}
                     component={SearcherComponent}
                     options={{
-                        tabBarLabel: 'Search',
                         tabBarColor: "#575757",
                         tabBarIcon: ({color}) => (
-                            <Entypo name="magnifying-glass" color={color} size={32}/>
+                            <MaterialCommunityIcons name="movie-search-outline" color={color} size={28}/>
                         ),
                     }}
                 />
                 <Tab.Screen
-                    name="Profile"
+                    name={menuConst.menuProfile.name}
                     component={ProfileComponent}
                     options={{
-                        tabBarLabel: 'Profile',
                         tabBarColor: "#575757",
                         tabBarIcon: ({color}) => (
-                            <MaterialCommunityIcons name="account" color={color} size={32}/>
+                            <MaterialCommunityIcons name="account" color={color} size={28}/>
                         ),
                     }}
                 />

@@ -1,0 +1,17 @@
+{
+    "menuHome": {
+        "name": "Home"
+    },
+
+    "menuList":{
+        "name": "List"
+    },
+
+    "menuSearch": {
+        "name": "Search"
+    },
+    
+    "menuProfile":{
+        "name": "Profile"
+    }
+}
