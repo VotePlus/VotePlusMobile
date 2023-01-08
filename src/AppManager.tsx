@@ -12,9 +12,11 @@ const Tab = createMaterialBottomTabNavigator();
 
 const AppManager = () => {
     return (
-        <NavigationContainer>
+        <NavigationContainer independent={true}>
             <Tab.Navigator
-                activeColor="#ffffff"
+                shifting={true}
+                labeled={false}
+                activeColor="black"
                 inactiveColor="#f7eb40"
                 barStyle={{ backgroundColor: '#2b2b2b'}}
             >
@@ -22,8 +24,10 @@ const AppManager = () => {
                     name="Home"
                     component={HomeComponent}
                     options={{
+                        tabBarLabel: 'Home',
+                        tabBarColor: "#575757",
                         tabBarIcon: ({color}) => (
-                            <MaterialCommunityIcons name="home-variant-outline" color={color} size={28}/>
+                            <MaterialCommunityIcons name="home-variant-outline" color={color} size={32} />
                         ),
                     }}
                 />
@@ -31,17 +35,21 @@ const AppManager = () => {
                     name="List"
                     component={ListComponent}
                     options={{
+                        tabBarLabel: 'List',
+                        tabBarColor: "#575757",
                         tabBarIcon: ({color}) => (
-                            <MaterialCommunityIcons name="view-list-outline" color={color} size={28}/>
+                            <MaterialCommunityIcons name="view-list-outline"  color={color} size={32}/>
                         ),
                     }}
                 />
                 <Tab.Screen
-                    name="Searcher"
+                    name="Search"
                     component={SearcherComponent}
                     options={{
+                        tabBarLabel: 'Search',
+                        tabBarColor: "#575757",
                         tabBarIcon: ({color}) => (
-                            <Entypo name="magnifying-glass" color={color} size={28}/>
+                            <Entypo name="magnifying-glass" color={color} size={32}/>
                         ),
                     }}
                 />
@@ -49,8 +57,10 @@ const AppManager = () => {
                     name="Profile"
                     component={ProfileComponent}
                     options={{
+                        tabBarLabel: 'Profile',
+                        tabBarColor: "#575757",
                         tabBarIcon: ({color}) => (
-                            <MaterialCommunityIcons name="account" color={color} size={28}/>
+                            <MaterialCommunityIcons name="account" color={color} size={32}/>
                         ),
                     }}
                 />
