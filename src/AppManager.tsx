@@ -10,6 +10,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Entypo from 'react-native-vector-icons/Entypo';
 import colorsConst from './Consts/colors.json';
 import menuConst from './Consts/menu.json';
+import { TouchableOpacity } from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,7 +29,6 @@ const AppManager = () => {
                     tabBarInactiveBackgroundColor: colorsConst.grayColorForMenu,
                     tabBarActiveTintColor: '#ffffff',
                     tabBarInactiveTintColor: colorsConst.yellowColorForIcons,
-                    
                 }}
             >
                 <Tab.Screen
