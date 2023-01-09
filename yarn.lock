@@ -1623,7 +1623,7 @@
   "resolved" "https://registry.npmjs.org/@react-navigation/elements/-/elements-1.3.12.tgz"
   "version" "1.3.12"
 
-"@react-navigation/material-bottom-tabs@^6.2.10":
+"@react-navigation/material-bottom-tabs@^6.2.9":
   "integrity" "sha512-AAD235PssGeB4lVk/rFTnVLPn7huWgkeoEuDewGyBdrYqn6btcvv2um1qiscJiVwcP0ICl3GyiXRpzAaipha4Q=="
   "resolved" "https://registry.npmjs.org/@react-navigation/material-bottom-tabs/-/material-bottom-tabs-6.2.10.tgz"
   "version" "6.2.10"
